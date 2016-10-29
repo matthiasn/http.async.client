@@ -137,8 +137,9 @@
 (defn- start-jetty
   ([handler]
    (start-jetty handler {:port 8123}))
-  ([handler {port :port :as opts :or {:port 8123}}]
-   (let [srv (Server. ^Integer port)
+  ([handler {port :port}]
+   (let [port (or port 8123)
+         srv (Server. ^Integer port)
          loginSrv (HashLoginService. "MyRealm" "test-resources/realm.properties")
          constraint (Constraint.)
          mapping (ConstraintMapping.)

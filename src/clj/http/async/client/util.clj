@@ -45,9 +45,9 @@
 
 (defn set-realm
   "Sets realm on builder."
-  [{:keys [type user password realm preemptive]
-    :or {:type :basic}} b]
-  (let [rbld (Realm$RealmBuilder.)]
+  [{:keys [type user password realm preemptive]} b]
+  (let [type (or type :basic)
+        rbld (Realm$RealmBuilder.)]
     (.setScheme rbld (type->auth-scheme type))
     (when (nil? user)
       (if (nil? password)

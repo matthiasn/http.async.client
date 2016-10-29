@@ -1,6 +1,11 @@
 http.async.client - Asynchronous HTTP Client for Clojure
 ========================================================
 
+**FORKED** to make [adamwynne/twitter-api](https://github.com/adamwynne/twitter-api) work with **Clojure 1.9.0-alpha14. Ideally, the twitter-api should be updated to use dependencies that will work with Clojure 1.9.
+
+
+---
+
 Master: [![Master - Build Status](https://secure.travis-ci.org/cch1/http.async.client.png?branch=master)](http://travis-ci.org/cch1/http.async.client)
 Development: [![Development - Build Status](https://secure.travis-ci.org/cch1/http.async.client.png?branch=development)](http://travis-ci.org/cch1/http.async.client)
 
